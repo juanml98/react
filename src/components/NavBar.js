@@ -2,15 +2,15 @@ import './NavBar.css';
 
 const NavBar = () => {
     return (
-        <div className='nav-enlace'>
-        <h1>CoderJS</h1>
+        <nav className='nav-enlace'>
+        <h3>CoderJS</h3>
         
         <div>
             <a href='celulares'>Celulares</a>
             <a href='indumentaria'>Indumentaria</a>
             <a href='electronica'>Electronica</a>
         </div>
-    </div>
+    </nav>
     
     )
 }
