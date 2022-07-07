@@ -1,7 +1,20 @@
 .nav-enlace {
-    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     padding: 0px 20px;
     display: inline-block;
+    overflow: hidden;
+}
+
+.nav-enlace a {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+.nav-enlace a:hover {
+    background-color: rgb(226, 115, 11);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
