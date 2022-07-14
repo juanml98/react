@@ -15,10 +15,7 @@ function App() {
         <ItemListContainer greeting='¡Bienvenidos!' />
 
         <ItemListContainer/>
-        <ItemListContainer/>
-        <ItemListContainer/>
         
-        <img src="" className="App-logo" alt="logo" />
       </header>
     </div>
   );
