@@ -1,12 +1,12 @@
 import React from "react";
 
-function Item({imagen, nombre, id, precio}) {
+function Item({imagen, nombre, precio, descripcion}) {
     return (
       <div>
-        <h3>{nombre}</h3>
+        <h2>{nombre}</h2>
         <img src={imagen} alt={imagen} width="200px" height={170}></img>
         <p>${precio}</p>
-        <p>{id}</p>
+        <p>{descripcion}</p>
       </div>
        
     )
