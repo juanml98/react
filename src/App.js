@@ -3,7 +3,6 @@ import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/itemListContainer/itemListContainer';
 import CartWidget from './components/cartWidget.js/cartWidget';
-import ItemCount from './components/itemCount/itemCount';
 
 
 function App() {
@@ -15,10 +14,9 @@ function App() {
         <CartWidget />
         <ItemListContainer greeting='¡Bienvenidos!' />
 
-        <ItemCount />
-        <ItemCount />
-        <ItemCount />
-        <ItemCount />
+        <ItemListContainer/>
+        <ItemListContainer/>
+        <ItemListContainer/>
         
         <img src="" className="App-logo" alt="logo" />
       </header>
