@@ -1,18 +1,24 @@
-import './NavBar.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import CartWidget from './cartWidget.js/cartWidget';
 
-const NavBar = () => {
-    return (
-        <nav className='nav-enlace'>
-        <h3>CoderJS</h3>
-        
-        <div>
-            <a href='celulares'>Celulares</a>
-            <a href='indumentaria'>Indumentaria</a>
-            <a href='electronica'>Electronica</a>
-        </div>
-    </nav>
-    
-    )
+function ColorSchemesExample() {
+  return (
+    <>
+      <Navbar bg="dark" variant="dark" fixed='top' style={{padding: '10px'}}>
+        <Container>
+          <Navbar.Brand href="#home">Smart Coder</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Inicio</Nav.Link>
+            <Nav.Link href="">Celulares</Nav.Link>
+            <Nav.Link href="">Contacto</Nav.Link>
+          </Nav>
+        <CartWidget />
+        </Container>
+      </Navbar>
+    </>
+  );
 }
 
-export default NavBar;
+export default ColorSchemesExample;

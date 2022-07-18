@@ -49,12 +49,13 @@ const productos = [
     },
 ];
 
-export default productos;
 
 export const getProductos = () => {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(productos)
-        },2000)
-    })
+        },2000);
+    });
 }
+
+export default productos;

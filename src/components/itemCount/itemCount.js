@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from 'react-bootstrap/Button';
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -21,17 +22,17 @@ const ItemCount = ({stock, initial, onAdd}) => {
     return (
         <div style={{display: "flex"}}> 
 
-            <button className="btn btn-danger mx-3"onClick={decrement} label='-'>-</button>
+            <button className="btn btn-danger mx-2"onClick={decrement} label='-'>-</button>
             <h1>{count}</h1>
-            <button className="btn btn-success mx-3" onClick={increment} label='+'>+</button>
-            <button className="btn btn-secondary mx-3" onClick={eliminar}>Eliminar</button>
-            <button onClick={() => {
+            <button className="btn btn-success mx-2" onClick={increment} label='+'>+</button>
+            <button className="btn btn-secondary mx-1" onClick={eliminar}>Eliminar</button>
+            <Button onClick={() => {
                 if (count <= stock) {
                     onAdd(count);
                 } else {
                     alert("No hay suficientes productos");
                 }
-            }}>Agregar al carrito</button>
+            }}>Agregar al carrito</Button>
             
         </div>
     );
