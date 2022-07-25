@@ -1,24 +1,47 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
+import './NavBar.css';
 import Navbar from 'react-bootstrap/Navbar';
 import CartWidget from './cartWidget.js/cartWidget';
+import { Link } from 'react-router-dom';
 
-function ColorSchemesExample() {
+
+const NavBar = () => {
   return (
-    <>
-      <Navbar bg="dark" variant="dark" fixed='top' style={{padding: '10px'}}>
+      <nav className="NavBar">
+        
+        <Navbar.Brand href="/" style={{padding: '25px'}}>Smart Coder</Navbar.Brand>
+          <div className="elementsHead">
+            <div className="Listado">
+              <Link to='/categorias/Apple' className='ListadoHijo'>Apple</Link>
+              <Link to='/categorias/Android' className='ListadoHijo'>Android</Link>
+             
+            </div>
+             
+             <CartWidget /> 
+                  
+          </div>
+      </nav>
+  )
+}
+
+/*function NavBar() {
+  return (
+    <div>
+    <nav>
+      <Navbar bg="dark" variant="dark" expand="lg" style={{padding: '10px'}}>
         <Container>
-          <Navbar.Brand href="#home">Smart Coder</Navbar.Brand>
+          <Navbar.Brand href="/">Smart Coder</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Inicio</Nav.Link>
-            <Nav.Link href="">Celulares</Nav.Link>
-            <Nav.Link href="">Contacto</Nav.Link>
+            <Link to='/'>Inicio</Link>
+            <Link to='/categorias'>Categorias</Link>
+            <Link to='/contacto'>Contacto</Link>
           </Nav>
         <CartWidget />
         </Container>
       </Navbar>
-    </>
+    </nav>
+    <Outlet />
+    </div>
   );
-}
+}*/
 
-export default ColorSchemesExample;
+export default NavBar;

@@ -1,0 +1,49 @@
+
+.Card{
+    margin: 10px 20px 30px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2f3236;
+    border-radius: 8px;
+    padding: 10px;
+    width: 400px;
+    box-shadow:  1px 10px 5px -2px rgba(197, 192, 192, 0.75);
+
+}
+
+.Card h1{
+    color: rgb(218, 200, 200);
+    margin-bottom: 0px;
+    font-weight:unset;
+}
+
+.Card img{
+    height: 250px;
+    border-radius: 2px;
+    margin: 10px 0;
+}
+
+.Card p{
+    margin: 0px 10px 0px 10px;
+    font-size: 25px;
+}
+
+.Detalle{
+    color: rgb(184, 181, 181);
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.Detalle:hover{
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s;
+}
+
+.Card:hover {
+    box-shadow: 1px 7px 24px 3px rgba(197, 192, 192, 0.767);
+    transition: 0.1s;
+}
+
+

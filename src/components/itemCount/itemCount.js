@@ -1,5 +1,6 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Button from 'react-bootstrap/Button';
+import Swal from 'sweetalert2';
 
 
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -30,7 +31,10 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 if (count <= stock) {
                     onAdd(count);
                 } else {
-                    alert("No hay suficientes productos");
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'No hay suficientes productos'
+                      });
                 }
             }}>Agregar al carrito</Button>
             

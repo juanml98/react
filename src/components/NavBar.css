@@ -1,20 +1,39 @@
-nav {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none;
-    padding: 0px 20px;
-    display: inline-block;
-    overflow: hidden;
+.NavBar{
+  display: flex;
+  align-items: center;
+  background: rgba(40,44,52,1);
+  justify-content: space-between;
+  height: 13vh;
 }
 
-.nav-enlace a {
-  float: left;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 17px;
+
+.elementsHead{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  font-size: 25px;
+  padding: 30px;
 }
 
-.nav-enlace a:hover {
-    background-color: rgb(226, 115, 11);
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+.Listado{
+  color: 
+  rgb(173, 168, 168);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
 }
+
+.ListadoHijo{
+  margin-right: 60px;
+  text-decoration: none;
+  color: rgb(201, 201, 201);
+}
+
+.ListadoHijo:hover{
+ color: #fff;
+ font-weight: bolder;
+ transition: color 0.3s;
+}
+

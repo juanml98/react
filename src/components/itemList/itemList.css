@@ -1,0 +1,20 @@
+.List{
+    margin-top: 30px;
+}
+
+.List h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: none;
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.CardSection{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80vw;
+    flex-wrap: wrap;
+}

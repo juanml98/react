@@ -1,25 +1,49 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import ItemCount from "../itemCount/itemCount";
-import Card from 'react-bootstrap/Card';
+import './item.css';
+import Swal from 'sweetalert2';
 
-function Item({imagen, nombre, precio, descripcion}) {
+const Item = (productos) => {
+
+    return(
+        <div className='Card'>
+            <h1>{productos.nombre}</h1>
+            <img src={productos.imagen} alt='imagen'></img>
+            <p style={{color: 'white'}}>${productos.precio}</p>
+            < Link to={`/detail/${productos.id}`} className='Detalle'>Ver detalle del artículo</Link>
+            < ItemCount 
+               stock={10} 
+               initial={0}
+               onAdd={(n) => {
+                Swal.fire({
+                  icon: 'success',
+                  title: (`Se han añadido ${n} productos`)
+                });
+               }}/>
+        </div>
+    )
+}
+export default Item;
+
+
+/*function Item(productos) {
     return (
       <div className="container">
         <div className="col">
-        <Card className="row-md-auto" style={{ width: '20rem', margin: '30px 30px', boxShadow: '0 0 10px gray'}}>
-          <Card.Img src={imagen} variant="top"/>
+        <Card className="row-md-auto" key={productos.id} style={{ width: '20rem', margin: '30px 30px', boxShadow: '0 0 10px gray'}}>
+          <Card.Img src={productos.imagen} variant="top" />
           <Card.Body>
+            
             <Card.Title>
-            <h2>{nombre}</h2>
-            </Card.Title>
-            <Card.Text>
-              <p>{descripcion}</p>
-              <h3>${precio}</h3>
-            </Card.Text>
-            <ItemCount 
-               stock={10} 
-               initial={0}
-               onAdd={(n) => alert (`Se han añadido ${n} productos`)}/>
+              <Card.Link>
+                 <h2>{productos.nombre}</h2>
+              </Card.Link>
+
+            </Card.Title> 
+            
+            <Link to={`/detalles/${productos.descripcion}`}>Detalles</Link>
+            
           </Card.Body>
         </Card>
         </div>
@@ -28,4 +52,4 @@ function Item({imagen, nombre, precio, descripcion}) {
       );
 }
 
-export default Item
+export default Item*/
